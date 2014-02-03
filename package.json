@@ -1,0 +1,15 @@
+{
+  "name": "blomp",
+  "version": "0.0.1",
+  "author": "",
+  "description": "",
+  "homepage": "",
+  "private": true,
+  "devDependencies": {
+    "typescript": "~0.9.5",
+    "grunt-ts": "~1.6.4",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-sass": "~0.7.2"
+  }
+}

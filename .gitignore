@@ -1,0 +1,8 @@
+bower_components
+node_modules
+assets/js/*.js*
+assets/js/*.ts*
+assets/css/*.css
+.sass-cache
+.DS_Store
+tscommand.tmp.txt
