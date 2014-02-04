@@ -36,7 +36,7 @@ module.exports = function (grunt) {
         },
         watch: {
             ts: {
-                files: ['sass/**/*.ts'],
+                files: ['typescript/**/*.ts'],
                 tasks: ['ts:lib']
             },
             sass: {
@@ -47,5 +47,5 @@ module.exports = function (grunt) {
     });
 
     grunt.registerTask('default', ['clean', 'ts:lib', 'sass:lib']);
-    //grunt.registerTask('dev', ['clean', 'ts', 'exec:tests', 'connect', 'open', 'watch']);
+    grunt.registerTask('dev', ['default', 'watch']);
 }

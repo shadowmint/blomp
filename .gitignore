@@ -6,3 +6,4 @@ assets/css/*.css
 .sass-cache
 .DS_Store
 tscommand.tmp.txt
+.idea
