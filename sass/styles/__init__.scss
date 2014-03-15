@@ -1,3 +1,12 @@
-@import 'external/__init__.scss';
-@import 'old/__init__.scss';
-@import 'pages/__init__.scss';
+/** Generic procedural content */
+@import 'functions/__init__';
+@import 'mixins/__init__';
+
+/** Site settings */
+@import 'settings';
+
+/** Specific components */
+@import 'external/__init__';
+@import 'components/__init__';
+@import 'layouts/__init__';
+@import 'pages/__init__';

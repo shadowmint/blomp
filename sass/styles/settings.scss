@@ -1,0 +1,28 @@
+/** Fonts */
+
+/* Import fonts */
+@include web-font(("Source Sans Pro"));
+
+/* Basic font to use for everything */
+$font-text: "Source Sans Pro", sans-serif;
+
+
+/** Colors */
+
+/* Basic colour that all text should use */
+$color-text: #333333;
+
+/* Meta data colors */
+$color-post-meta: #d2cccf;
+$color-post-meta-link: #1c1c8c;
+
+
+/** Responsive */
+
+/* Mobile breakpoints */
+$responsive-mobile: 768px;
+$responsive-mobile-edge: 769px;
+
+/* Tablet breakpoints */
+$responsive-tablet: 1024px;
+$responsive-tablet-edge: 1025px;

@@ -1,0 +1,65 @@
+@mixin xn-transform($value...) {
+  -webkit-transform: $value;
+  -moz-transform: $value;
+  -ms-transform: $value;
+  -o-transform: $value;
+  transform: $value;
+}
+
+@mixin xn-matrix3d($perspective, $value) {
+  @include xn-transform(perspective($perspective) matrix3d(_unify($value)));
+}
+
+@mixin xn-perspective($value) {
+  -webkit-perspective: $value;
+  -moz-perspective: $value;
+  -ms-perspective: $value;
+  perspective: $value;
+}
+
+@mixin xn-transition($value...) {
+  -webkit-transition: $value;
+  -moz-transition: $value;
+  -o-transition: $value;
+  transition: $value;
+}
+
+@mixin xn-animation($value...) {
+  -webkit-animation: $value;
+  -moz-animation: $value;
+  -o-animation: $value;
+  animation: $value;
+}
+
+@mixin xn-animation-fill-mode($value) {
+    -webkit-animation-fill-mode: $value;
+    -moz-animation-fill-mode: $value;
+    -o-animation-fill-mode: $value;
+    animation-fill-mode: $value;
+}
+
+@mixin xn-animation-forwards($value) {
+  @include xn-animation($value);
+  @include xn-animation-fill-mode(forwards);
+}
+
+@mixin xn-animation-timing-function($value...) {
+  animation-timing-function: $value;
+  -moz-animation-timing-function: $value;
+  -webkit-animation-timing-function: $value;
+}
+
+@mixin xn-keyframes($name) {
+  @-webkit-keyframes $name {
+    @content;
+  }
+  @-moz-keyframes $name {
+    @content;
+  }
+  @-o-keyframes $name {
+    @content;
+  }
+  @keyframes $name {
+    @content;
+  }
+}

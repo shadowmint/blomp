@@ -1,0 +1,8 @@
+@mixin xn-selection() {
+  ::-moz-selection {
+    @content;
+  }
+  ::selection {
+    @content;
+  }
+}

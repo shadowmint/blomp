@@ -1,0 +1,51 @@
+    /* A scale matrix */
+    @function _scale($x, $y, $z) {
+      @return (
+        ($x, 0, 0, 0),
+        (0, $y, 0, 0),
+        (0, 0, $z, 0),
+        (0, 0, 0, 1)
+      );
+    }
+
+    /* Rotation matrix for x, y, z */
+    @function _rotateX($angle) {
+      $angle: -$angle; // Match CSS transform
+      @return (
+        (1, 0, 0, 0),
+        (0, _cos($angle), _sin(-$angle), 0),
+        (0, _sin($angle), _cos( $angle), 0),
+        (0, 0, 0, 1)
+      );
+    }
+
+    @function _rotateY($angle) {
+      $angle: -$angle; // Match CSS transform
+      @return (
+        (_cos($angle), 0, _sin($angle), 0),
+        (0, 1, 0, 0),
+        (_sin(-$angle), 0, _cos($angle), 0),
+        (0, 0, 0, 1)
+      );
+    }
+
+    @function _rotateZ($angle) {
+      $angle: -$angle; // Match CSS transform
+      @return (
+        (_cos($angle), _sin(-$angle), 0, 0),
+        (_sin($angle), _cos($angle), 0, 0),
+        (0, 0, 1, 0),
+        (0, 0, 0, 1)
+      );
+    }
+
+    /* A translate matrix */
+    @function _translate($x, $y, $z) {
+      @return (
+        (1, 0, 0, 0),
+        (0, 1, 0, 0),
+        (0, 0, 1, 0),
+        ($x, $y, $z, 1)
+      );
+    }
+
