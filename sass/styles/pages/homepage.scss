@@ -1,168 +1,140 @@
 /** The homepage itself */
+.home-template {
 
-/* Big cover image on the home page */
-.site-head {
-  position: relative;
-  display: table;
-  width: 100%;
-  height: 20%;
-  margin-bottom: 5rem;
-  text-align: center;
-  color: #fff;
-  background: #303538 no-repeat center center;
-  background-size: cover;
-}
+  /* Big cover image on the home page */
+  .site-head {
+    margin-left: auto;
+    margin-right: auto;
+    display: inline-block;
+    text-align: center;
+    background: $color-post-header;
+    @include xn-box-shadow(0px 4px 4px #aaa);
+    border-radius: 5px;
+    position: relative;
+    top: -20px;
+    font-size: 0.8em;
+    font-weight: bold;
+    height: 60px;
+    line-height: 85px;
+    opacity: 0.8;
+    width: 100%;
+    clear: both;
+    .site-head-content {
+      width: 100%;
+    }
+  }
 
-.blog-logo {
-  text-decoration: none;
-}
+  .blog-logo {
+    text-decoration: none;
+  }
 
-/* Yo-logo. Yolo-go. Upload one in ghost/settings/ */
-.blog-logo img {
-  display: block;
-  max-height: 100px;
-  width: auto;
-  margin: 0 auto;
-  line-height: 0;
-}
+  /* Yo-logo. Yolo-go. Upload one in ghost/settings/ */
+  .blog-logo img {
+    display: block;
+    max-height: 100px;
+    width: auto;
+    margin: 0 auto;
+    line-height: 0;
+  }
 
-/* The details of your blog. Defined in ghost/settings/ */
-.blog-title {
-  margin: 10px 0 10px 0;
-  letter-spacing: -1px;
-  font-weight: bold;
-  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
-}
+  /* The details of your blog. Defined in ghost/settings/ */
+  .blog-title {
+    font-size: 1.1em;
+    margin: 10px 0 10px 0;
+    letter-spacing: -1px;
+    font-weight: bold;
+    text-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+    text-align:center;
+  }
 
-.blog-description {
-  margin: 0;
-  font-size: 1.8rem;
-  line-height: 1.5em;
-  font-weight: 300;
-  font-family: 'Noto Serif', serif;
-  letter-spacing: 0;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
-}
+  .blog-description {
+    margin-left: 5px;
+    font-size: 1.3rem;
+    text-align:center;
+    line-height: 1.5em;
+    font-weight: 300;
+    font-family: 'Noto Serif', serif;
+    letter-spacing: 0;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+  }
 
-/** All about posts on the homepage */
+  /* Special styles for homepage */
+  .post-title {
+    display: block;
+    background: $color-post-background;
+    width: 200px;
+    @include xn-box-shadow(4px 4px 4px $color-post-meta-box-shadow);
+    position: absolute;
+    opacity: 0.7;
+    z-index: 1;
+    height: 50px;
+    margin: 0 0 5px 0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.3rem;
+    line-height: 35px;
+    a {
+      color: $color-post-meta;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: none;
+    }
+  }
 
-/* The image that floats to the left of the post description, if possible */
-.post-image {
-  float: left;
-  border-radius: 5px;
-  height: 150px;
-  width: 150px;
-  margin-right: 25px;
-}
+  /* The image that floats to the left of the post description, if possible */
+  .post-image {
+    display: block;
+    border-radius: 4px;
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    z-index: 0;
+  }
 
-/* Every post, on every page, gets this style on its <article> tag */
-.post {
-  position: relative;
-  width: 80%;
-  max-width: 700px;
-  margin: 4rem auto;
-  word-break: break-word;
-  hyphens: auto;
-  border: 1px solid #efefef;
-  border-radius: 5px;
-  height: 150px;
-  overflow: hidden;
-  padding: 10px;
-}
+  /* Meta data */
+  .post-meta {
+    width: 200px;
+    top: 18px;
+    left: 0px;
+    position: absolute;
+    z-index: 2;
+    height: 30px;
+  }
 
-/* Add a little circle in the middle of the border-bottom on our .post
-   just for the lolz and stylepoints. */
-.post:after {
-  display: block;
-  content: "";
-  width: 7px;
-  height: 7px;
-  border: #E7EEF2 1px solid;
-  position: absolute;
-  bottom: -5px;
-  left: 50%;
-  margin-left: -5px;
-  background: #fff;
-  -webkit-border-radius: 100%;
-  -moz-border-radius: 100%;
-  border-radius: 100%;
-  box-shadow: #fff 0 0 0 5px;
-}
+  /* Every post, on every page, gets this style on its <article> tag */
+  .post {
+    overflow: hidden;
+    width: 200px;
+    height: 200px;
+    display: inline-block;
+    margin: 15px;
+    background: $color-post-background;
+    vertical-align: top;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    @include xn-box-shadow(3px 3px 3px $color-post-box-shadow);
+  }
 
-.post-title {
-  margin: 0;
-}
+  /* Main content block */
+  .content {
+    text-align: center;
+    width: 100%;
+  }
 
-.post-title a {
-  text-decoration: none;
-}
-
-.post-excerpt {
-  margin-bottom: 10px;
-}
-
-.post-excerpt p {
-  margin: 0.2rem 0 0px 0;
-  font-size: 0.8em;
-  line-height: 1.6em;
-}
-
-.post-meta {
-  display: inline-block;
-  margin: 0 0 5px 0;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 1.5rem;
-  color: $color-post-meta;
-}
-
-.post-meta a {
-  color: $color-post-meta-link;
-  text-decoration: none;
-}
-
-.post-meta a:hover {
-  text-decoration: underline;
-}
-
-.user-meta {
-  position: relative;
-  padding: 0.3rem 40px 0 100px;
-  min-height: 77px;
-}
-
-.user-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.user-name {
-  display: block;
-  font-weight: bold;
-}
-
-.user-bio {
-  display: block;
-  max-width: 440px;
-  font-size: 1.4rem;
-  line-height: 1.5em;
-}
-
-.publish-meta {
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding: 4.3rem 0 4rem 0;
-  text-align: right;
-}
-
-.publish-heading {
-  display: block;
-  font-weight: bold;
-}
-
-.publish-date {
-  display: block;
-  font-size: 1.4rem;
-  line-height: 1.5em;
+  .post-excerpt {
+    display: none;
+    width: 200px;
+    text-shadow: 1px 1px 2px #efefef;
+    z-index: 1;
+    opacity: 1;
+    height: 100%;
+    position: absolute;
+    font-size: 0.8em;
+    p {
+      padding: 10px;
+      margin: 0px;
+      font-size: 0.8em;
+      line-height: 1.6em;
+    }
+  }
 }

@@ -12,10 +12,17 @@ $font-text: "Source Sans Pro", sans-serif;
 /* Basic colour that all text should use */
 $color-text: #333333;
 
-/* Meta data colors */
-$color-post-meta: #d2cccf;
+/* Post specific colors */
+$color-post-background: #eee;
+$color-post-box-shadow: #999;
+
+$color-post-meta: #161415;
+$color-post-meta-box-shadow: #060606;
 $color-post-meta-link: #1c1c8c;
 
+$color-post-title: #cfcfff;
+
+$color-post-header: #dddddd;
 
 /** Responsive */
 

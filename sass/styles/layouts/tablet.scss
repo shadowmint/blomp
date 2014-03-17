@@ -8,15 +8,6 @@
         margin-left: 0;
     }
 
-    .site-head {
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-        height: auto;
-        min-height: 240px;
-        padding: 15% 0;
-    }
-
     .blog-title {
         font-size: 4rem;
         letter-spacing: -1px;
@@ -29,15 +20,10 @@
 
     .post {
         font-size: 0.9em;
-        line-height: 1.6em;
     }
 
     .post-template .post {
         padding-bottom: 1rem;
-    }
-
-    .post-template .post-header {
-        padding: 40px 0;
     }
 
     h1 {
@@ -46,7 +32,6 @@
     }
 
     h2 {
-        font-size: 3.8rem;
     }
 
     h3 {
